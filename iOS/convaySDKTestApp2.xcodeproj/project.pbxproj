@@ -7,24 +7,48 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		92330CEC2F1DF636003B137D /* ConvayMeetSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 92330CEB2F1DF636003B137D /* ConvayMeetSDK */; };
-		92330CED2F1DF657003B137D /* GiphyUISDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92D751D12F14E7FB008C5BCA /* GiphyUISDK.xcframework */; };
-		92330CEE2F1DF657003B137D /* GiphyUISDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 92D751D12F14E7FB008C5BCA /* GiphyUISDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		92330CEF2F1DF657003B137D /* WebRTC.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92D751D52F14E819008C5BCA /* WebRTC.xcframework */; };
-		92330CF02F1DF657003B137D /* WebRTC.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 92D751D52F14E819008C5BCA /* WebRTC.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		920A6E112F20CB9A006FAE2B /* WebRTC.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92D751D52F14E819008C5BCA /* WebRTC.xcframework */; };
+		920A6E122F20CB9A006FAE2B /* WebRTC.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 92D751D52F14E819008C5BCA /* WebRTC.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		920A6E142F20CB9F006FAE2B /* GiphyUISDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92D751D12F14E7FB008C5BCA /* GiphyUISDK.xcframework */; };
+		920A6E152F20CB9F006FAE2B /* GiphyUISDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 92D751D12F14E7FB008C5BCA /* GiphyUISDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		920A6E182F223991006FAE2B /* ConvayMeetSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 920A6E172F223991006FAE2B /* ConvayMeetSDK */; };
+		920A6E1A2F2239A1006FAE2B /* ConvayMeetSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 920A6E192F2239A1006FAE2B /* ConvayMeetSDK */; };
+		92DF14242F1F9558009B572B /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92DF14232F1F9557009B572B /* ReplayKit.framework */; };
+		92DF143A2F1F9558009B572B /* sharescreen.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 92DF14222F1F9557009B572B /* sharescreen.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		92DF14382F1F9558009B572B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 92D751942F14D570008C5BCA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92DF14212F1F9557009B572B;
+			remoteInfo = sharescreen;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
-		92330CF12F1DF657003B137D /* Embed Frameworks */ = {
+		920A6E132F20CB9A006FAE2B /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				92330CF02F1DF657003B137D /* WebRTC.xcframework in Embed Frameworks */,
-				92330CEE2F1DF657003B137D /* GiphyUISDK.xcframework in Embed Frameworks */,
+				920A6E152F20CB9F006FAE2B /* GiphyUISDK.xcframework in Embed Frameworks */,
+				920A6E122F20CB9A006FAE2B /* WebRTC.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92DF14432F1F9558009B572B /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				92DF143A2F1F9558009B572B /* sharescreen.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -33,6 +57,9 @@
 		92D7519C2F14D570008C5BCA /* convaySDKTestApp2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = convaySDKTestApp2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92D751D12F14E7FB008C5BCA /* GiphyUISDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = GiphyUISDK.xcframework; path = "../../Projects/convay-meet-sdk-9646/local-ios-sdk/RequiredFrameworks/GiphyUISDK.xcframework"; sourceTree = "<group>"; };
 		92D751D52F14E819008C5BCA /* WebRTC.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = WebRTC.xcframework; path = "../../Projects/convay-meet-sdk-9646/local-ios-sdk/RequiredFrameworks/WebRTC.xcframework"; sourceTree = "<group>"; };
+		92DF14222F1F9557009B572B /* sharescreen.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = sharescreen.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		92DF14232F1F9557009B572B /* ReplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReplayKit.framework; path = System/Library/Frameworks/ReplayKit.framework; sourceTree = SDKROOT; };
+		92DF142F2F1F9558009B572B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -42,6 +69,13 @@
 				Info.plist,
 			);
 			target = 92D7519B2F14D570008C5BCA /* convaySDKTestApp2 */;
+		};
+		92DF14422F1F9558009B572B /* Exceptions for "sharescreen" folder in "sharescreen" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 92DF14212F1F9557009B572B /* sharescreen */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -54,6 +88,14 @@
 			path = convaySDKTestApp2;
 			sourceTree = "<group>";
 		};
+		92DF14252F1F9558009B572B /* sharescreen */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				92DF14422F1F9558009B572B /* Exceptions for "sharescreen" folder in "sharescreen" target */,
+			);
+			path = sharescreen;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,9 +103,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92330CED2F1DF657003B137D /* GiphyUISDK.xcframework in Frameworks */,
-				92330CEC2F1DF636003B137D /* ConvayMeetSDK in Frameworks */,
-				92330CEF2F1DF657003B137D /* WebRTC.xcframework in Frameworks */,
+				920A6E112F20CB9A006FAE2B /* WebRTC.xcframework in Frameworks */,
+				920A6E182F223991006FAE2B /* ConvayMeetSDK in Frameworks */,
+				920A6E142F20CB9F006FAE2B /* GiphyUISDK.xcframework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92DF141F2F1F9557009B572B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				920A6E1A2F2239A1006FAE2B /* ConvayMeetSDK in Frameworks */,
+				92DF14242F1F9558009B572B /* ReplayKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				92D7519E2F14D570008C5BCA /* convaySDKTestApp2 */,
+				92DF14252F1F9558009B572B /* sharescreen */,
 				92D751CB2F14E656008C5BCA /* Frameworks */,
 				92D7519D2F14D570008C5BCA /* Products */,
 			);
@@ -83,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				92D7519C2F14D570008C5BCA /* convaySDKTestApp2.app */,
+				92DF14222F1F9557009B572B /* sharescreen.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -92,6 +145,8 @@
 			children = (
 				92D751D52F14E819008C5BCA /* WebRTC.xcframework */,
 				92D751D12F14E7FB008C5BCA /* GiphyUISDK.xcframework */,
+				92DF14232F1F9557009B572B /* ReplayKit.framework */,
+				92DF142F2F1F9558009B572B /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -106,22 +161,47 @@
 				92D751982F14D570008C5BCA /* Sources */,
 				92D751992F14D570008C5BCA /* Frameworks */,
 				92D7519A2F14D570008C5BCA /* Resources */,
-				92330CF12F1DF657003B137D /* Embed Frameworks */,
+				92DF14432F1F9558009B572B /* Embed Foundation Extensions */,
+				920A6E132F20CB9A006FAE2B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				92DF14392F1F9558009B572B /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				92D7519E2F14D570008C5BCA /* convaySDKTestApp2 */,
 			);
 			name = convaySDKTestApp2;
 			packageProductDependencies = (
-				92330CEB2F1DF636003B137D /* ConvayMeetSDK */,
+				920A6E172F223991006FAE2B /* ConvayMeetSDK */,
 			);
 			productName = convaySDKTestApp2;
 			productReference = 92D7519C2F14D570008C5BCA /* convaySDKTestApp2.app */;
 			productType = "com.apple.product-type.application";
+		};
+		92DF14212F1F9557009B572B /* sharescreen */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92DF143F2F1F9558009B572B /* Build configuration list for PBXNativeTarget "sharescreen" */;
+			buildPhases = (
+				92DF141E2F1F9557009B572B /* Sources */,
+				92DF141F2F1F9557009B572B /* Frameworks */,
+				92DF14202F1F9557009B572B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				92DF14252F1F9558009B572B /* sharescreen */,
+			);
+			name = sharescreen;
+			packageProductDependencies = (
+				920A6E192F2239A1006FAE2B /* ConvayMeetSDK */,
+			);
+			productName = sharescreen;
+			productReference = 92DF14222F1F9557009B572B /* sharescreen.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -137,6 +217,9 @@
 						CreatedOnToolsVersion = 26.1.1;
 						LastSwiftMigration = 2610;
 					};
+					92DF14212F1F9557009B572B = {
+						CreatedOnToolsVersion = 26.1.1;
+					};
 				};
 			};
 			buildConfigurationList = 92D751972F14D570008C5BCA /* Build configuration list for PBXProject "convaySDKTestApp2" */;
@@ -149,7 +232,7 @@
 			mainGroup = 92D751932F14D570008C5BCA;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				92330CEA2F1DF636003B137D /* XCLocalSwiftPackageReference "../../Projects/convay-meet-sdk-9646/local-ios-sdk" */,
+				920A6E162F223987006FAE2B /* XCLocalSwiftPackageReference "../../Projects/convay-meet-sdk-9646/local-ios-sdk" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 92D7519D2F14D570008C5BCA /* Products */;
@@ -157,12 +240,20 @@
 			projectRoot = "";
 			targets = (
 				92D7519B2F14D570008C5BCA /* convaySDKTestApp2 */,
+				92DF14212F1F9557009B572B /* sharescreen */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		92D7519A2F14D570008C5BCA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92DF14202F1F9557009B572B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -179,7 +270,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		92DF141E2F1F9557009B572B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		92DF14392F1F9558009B572B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 92DF14212F1F9557009B572B /* sharescreen */;
+			targetProxy = 92DF14382F1F9558009B572B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		92D751B02F14D572008C5BCA /* Debug */ = {
@@ -188,11 +294,20 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = convaySDKTestApp2/convaySDKTestApp2.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QQN3WP3JSR;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = convaySDKTestApp2/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Bluetooth is used for audio devices during calls.";
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "See your scheduled meetings in the app.";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Camera access is required for video calls.";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Local network is used for establishing Peer-to-Peer connections.";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "This app needs access to location to provide location-based services and device management.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app needs access to location to provide location-based services and device management.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Microphone access is required for voice and video calls.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We need to update your profile with images from your storage or camera and send attachment to your message room from storage";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -205,7 +320,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = com.raiyansharif.convaySDKTestApp2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.synesisit.convay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -225,11 +340,20 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = convaySDKTestApp2/convaySDKTestApp2.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QQN3WP3JSR;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = convaySDKTestApp2/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Bluetooth is used for audio devices during calls.";
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "See your scheduled meetings in the app.";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Camera access is required for video calls.";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Local network is used for establishing Peer-to-Peer connections.";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "This app needs access to location to provide location-based services and device management.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app needs access to location to provide location-based services and device management.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Microphone access is required for voice and video calls.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We need to update your profile with images from your storage or camera and send attachment to your message room from storage";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -242,7 +366,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = com.raiyansharif.convaySDKTestApp2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.synesisit.convay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -376,6 +500,66 @@
 			};
 			name = Release;
 		};
+		92DF14402F1F9558009B572B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = sharescreen/sharescreen.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QQN3WP3JSR;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = sharescreen/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = sharescreen;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.synesisit.convay.broadcastextension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		92DF14412F1F9558009B572B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = sharescreen/sharescreen.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QQN3WP3JSR;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = sharescreen/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = sharescreen;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.synesisit.convay.broadcastextension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -397,18 +581,33 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		92DF143F2F1F9558009B572B /* Build configuration list for PBXNativeTarget "sharescreen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92DF14402F1F9558009B572B /* Debug */,
+				92DF14412F1F9558009B572B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		92330CEA2F1DF636003B137D /* XCLocalSwiftPackageReference "../../Projects/convay-meet-sdk-9646/local-ios-sdk" */ = {
+		920A6E162F223987006FAE2B /* XCLocalSwiftPackageReference "../../Projects/convay-meet-sdk-9646/local-ios-sdk" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = "../../Projects/convay-meet-sdk-9646/local-ios-sdk";
 		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		92330CEB2F1DF636003B137D /* ConvayMeetSDK */ = {
+		920A6E172F223991006FAE2B /* ConvayMeetSDK */ = {
 			isa = XCSwiftPackageProductDependency;
+			package = 920A6E162F223987006FAE2B /* XCLocalSwiftPackageReference "../../Projects/convay-meet-sdk-9646/local-ios-sdk" */;
+			productName = ConvayMeetSDK;
+		};
+		920A6E192F2239A1006FAE2B /* ConvayMeetSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 920A6E162F223987006FAE2B /* XCLocalSwiftPackageReference "../../Projects/convay-meet-sdk-9646/local-ios-sdk" */;
 			productName = ConvayMeetSDK;
 		};
 /* End XCSwiftPackageProductDependency section */

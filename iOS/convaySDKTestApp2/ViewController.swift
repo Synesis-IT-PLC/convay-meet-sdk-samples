@@ -18,8 +18,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        convayMeetView = ConvayMeetView()
-        convayMeetView?.delegate = self
+        // Don't create view here - create it when needed in button actions
         
         
 //        let endCallButton = UIButton(type: .system)
@@ -77,6 +76,8 @@ class ViewController: UIViewController {
      */
 //
     @IBAction func startButtonTapped(_ sender: Any) {
+        // Clean up any existing view first
+        cleanUp()
         
         let convayMeetView = ConvayMeetView()
         convayMeetView.delegate = self
@@ -84,8 +85,16 @@ class ViewController: UIViewController {
         
         let options = ConvayMeetConferenceOptions.fromBuilder { builder in
             builder.setFeatureFlag("startpage.enabled", withValue: true)
-            
-            builder.token = "eyJhbGciOiJIUzUxMiJ9.eyJhY2Nlc3NfdG9rZW4iOiJzeXRfY21GcGVXRnVMbk5vWVhKcFptRjBjM2x1WlhOcGMybDBMbWx1Wm04X3hLbW1hUVRZallPYnBGakJ3SUFNXzBQNlB3SCIsImlzX29ubHlfc3NvIjpmYWxzZSwic3ViIjoiN2MwZTU1YTktYzRlNi00OTZiLWE1YmEtMjNiOWY2ODFiNmIxIiwiZGF0YSI6eyJmZWF0dXJlcyI6WyJSZWNvcmRpbmciLCJEZXNrdG9wQXBwIiwiVHJhbnNjcmlwdGlvbiIsIkNoYXQiLCJMaXZlc3RyZWFtaW5nIl0sInVzZXJfZW1haWwiOiJyYWl5YW4uc2hhcmlmQHN5bmVzaXNpdC5pbmZvIiwibGljZW5zZV9uYW1lIjoiSG9zdCIsInJvbGUiOiJPd25lciIsIm9yZ2FuaXphdGlvbl9pZCI6ImMyZGQ5OTE2LWNlNjgtMTFlZC05YTRjLTAyNDJhYzEzMDAwOCIsIm9yZ2FuaXphdGlvbl9uYW1lIjoiU3luZXNpcyBJVCBQTEMiLCJJRCI6IjdjMGU1NWE5LWM0ZTYtNDk2Yi1hNWJhLTIzYjlmNjgxYjZiMSIsInZhbml0eV91cmwiOm51bGwsImRpc3BsYXlfbmFtZSI6IlJhaXlhbiBTaGFyaWYiLCJvcmdhbml6YXRpb25fbG9nbyI6bnVsbCwiaXNfY21fdXNlciI6dHJ1ZX0sImRldmljZV9pZCI6IlNCRkNMQlJVUlEiLCJ1c2VyX2lkIjoiQHJhaXlhbi5zaGFyaWZhdHN5bmVzaXNpdC5pbmZvOm1hdHJpeC5jb252YXkuY29tIiwid2VsbF9rbm93biI6bnVsbCwicGVybWlzc2lvbiI6eyJ2aWV3X2dyb3VwIjp0cnVlLCJhZGRfcm9sZSI6dHJ1ZSwidmlld19vcmdhbml6YXRpb24iOnRydWUsImVkaXRfdXNlciI6dHJ1ZSwiZWRpdF9vcmdhbml6YXRpb24iOnRydWUsImVkaXRfZ3JvdXAiOnRydWUsImRlbGV0ZV9yb2xlIjp0cnVlLCJ2aWV3X3JvbGUiOnRydWUsImVkaXRfcm9sZSI6dHJ1ZSwidmlld19tZWV0aW5nIjp0cnVlLCJhZGRfZ3JvdXAiOnRydWUsInZpZXdfZGFzaGJvYXJkIjp0cnVlLCJ2aWV3X3VzZXIiOnRydWUsImRlbGV0ZV91c2VyIjp0cnVlLCJhZGRfdXNlciI6dHJ1ZSwiZGVsZXRlX2dyb3VwIjp0cnVlfSwiZXhwIjoxNzY4NzM5MDA1LCJpYXQiOjE3Njg3MzgxMDUsImhvbWVfc2VydmVyIjoibWF0cml4LmNvbnZheS5jb20ifQ.p3w7lI2sPXiWeQsn4koLASxbwXA4BQKscQccgty9wgm-EMlvtmnxKrA8BIP1lC0QW4hUpATJQ0zWZVU13jW3LA"
+            builder.setFeatureFlag("ios.screensharing.enabled", withBoolean: true)
+//            builder.setFeatureFlag("prejoinpage.enabled", withBoolean: true)
+//            builder.setFeatureFlag("prejoinConfig.enabled", withBoolean: true)
+//            builder.setFeatureFlag("startWithVideoMuted", withBoolean: false)
+//            builder.setFeatureFlag("startWithAudioMuted", withBoolean: false)
+            // Force video to be enabled and initialized on pre-join page
+//            builder.setFeatureFlag("prejoinpage.hideDisplayName", withBoolean: false)
+//            builder.setVideoMuted(true)
+//            builder.setAudioMuted(false)
+            builder.token = "eyJhbGciOiJIUzUxMiJ9.eyJhY2Nlc3NfdG9rZW4iOiJzeXRfY21GcGVXRnVMbk5vWVhKcFptRjBjM2x1WlhOcGMybDBMbWx1Wm04X2ZRcGpQeklKZUpwY0pmQU1GcnVpXzNKZk1oeiIsImlzX29ubHlfc3NvIjpmYWxzZSwic3ViIjoiN2MwZTU1YTktYzRlNi00OTZiLWE1YmEtMjNiOWY2ODFiNmIxIiwiZGF0YSI6eyJmZWF0dXJlcyI6WyJSZWNvcmRpbmciLCJEZXNrdG9wQXBwMSIsIlRyYW5zY3JpcHRpb24iLCJDaGF0IiwiTGl2ZXN0cmVhbWluZyJdLCJ1c2VyX2VtYWlsIjoicmFpeWFuLnNoYXJpZkBzeW5lc2lzaXQuaW5mbyIsImxpY2Vuc2VfbmFtZSI6Ikhvc3QiLCJyb2xlIjoiT3duZXIiLCJvcmdhbml6YXRpb25faWQiOiJjMmRkOTkxNi1jZTY4LTExZWQtOWE0Yy0wMjQyYWMxMzAwMDgiLCJvcmdhbml6YXRpb25fbmFtZSI6IlN5bmVzaXMgSVQgUExDIiwiSUQiOiI3YzBlNTVhOS1jNGU2LTQ5NmItYTViYS0yM2I5ZjY4MWI2YjEiLCJ2YW5pdHlfdXJsIjpudWxsLCJkaXNwbGF5X25hbWUiOiJSYWl5YW4gU2hhcmlmIiwib3JnYW5pemF0aW9uX2xvZ28iOm51bGwsImlzX2NtX3VzZXIiOnRydWV9LCJkZXZpY2VfaWQiOiJVQVZOTEpTRkJPIiwidXNlcl9pZCI6IkByYWl5YW4uc2hhcmlmYXRzeW5lc2lzaXQuaW5mbzptYXRyaXguY29udmF5LmNvbSIsIndlbGxfa25vd24iOm51bGwsInBlcm1pc3Npb24iOnsidmlld19ncm91cCI6dHJ1ZSwiYWRkX3JvbGUiOnRydWUsInZpZXdfb3JnYW5pemF0aW9uIjp0cnVlLCJlZGl0X3VzZXIiOnRydWUsImVkaXRfb3JnYW5pemF0aW9uIjp0cnVlLCJlZGl0X2dyb3VwIjp0cnVlLCJkZWxldGVfcm9sZSI6dHJ1ZSwidmlld19yb2xlIjp0cnVlLCJlZGl0X3JvbGUiOnRydWUsInZpZXdfbWVldGluZyI6dHJ1ZSwiYWRkX2dyb3VwIjp0cnVlLCJ2aWV3X2Rhc2hib2FyZCI6dHJ1ZSwidmlld191c2VyIjp0cnVlLCJkZWxldGVfdXNlciI6dHJ1ZSwiYWRkX3VzZXIiOnRydWUsImRlbGV0ZV9ncm91cCI6dHJ1ZX0sImV4cCI6MTc2OTAwNzE1MiwiaWF0IjoxNzY5MDA2MjUyLCJob21lX3NlcnZlciI6Im1hdHJpeC5jb252YXkuY29tIn0.nftslDZv3EEtRDND1zbKmUeuzOxpUqtttkcNoRNYpVFFM8CFrSa1Lj_YKTP4U2BWSrgUgbUZXc4ExZa7OHq6dw"
         }
         
         convayMeetView.join(options)
@@ -95,18 +104,32 @@ class ViewController: UIViewController {
                 // animate in
         convayMeetView.alpha = 0
         pipViewCoordinator?.show()
+        
+        // Ensure video is enabled after a short delay to allow SDK to initialize
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            // Video should already be enabled via options, but this ensures it stays enabled
+        }
     }
     
     @IBAction func joinCallButtonTapped(_ sender: Any) {
+        // Clean up any existing view first
+        cleanUp()
+        
         let convayMeetView = ConvayMeetView()
         convayMeetView.delegate = self
         self.convayMeetView = convayMeetView
         let options = ConvayMeetConferenceOptions.fromBuilder { builder in
-            
             builder.setFeatureFlag("joinpage.enabled", withValue: true)
-            builder.meetingLink = "https://convay.com/m/j/912399454038/raiyan?pwd=91d4279ac53ddfd9b7e62b744247e0ad"
-            
-            
+            builder.setFeatureFlag("ios.screensharing.enabled", withBoolean: true)
+            builder.setFeatureFlag("prejoinpage.enabled", withBoolean: true)
+            builder.setFeatureFlag("prejoinConfig.enabled", withBoolean: true)
+            builder.setFeatureFlag("startWithVideoMuted", withBoolean: false)
+            builder.setFeatureFlag("startWithAudioMuted", withBoolean: false)
+            // Ensure video is enabled and initialized on pre-join page
+            builder.setFeatureFlag("prejoinpage.hideDisplayName", withBoolean: false)
+            builder.setVideoMuted(false)
+            builder.setAudioMuted(false)
+            builder.token = "eyJhbGciOiJIUzUxMiJ9.eyJhY2Nlc3NfdG9rZW4iOiJzeXRfY21GcGVXRnVMbk5vWVhKcFptRjBjM2x1WlhOcGMybDBMbWx1Wm04X2ZRcGpQeklKZUpwY0pmQU1GcnVpXzNKZk1oeiIsImlzX29ubHlfc3NvIjpmYWxzZSwic3ViIjoiN2MwZTU1YTktYzRlNi00OTZiLWE1YmEtMjNiOWY2ODFiNmIxIiwiZGF0YSI6eyJmZWF0dXJlcyI6WyJSZWNvcmRpbmciLCJEZXNrdG9wQXBwMSIsIlRyYW5zY3JpcHRpb24iLCJDaGF0IiwiTGl2ZXN0cmVhbWluZyJdLCJ1c2VyX2VtYWlsIjoicmFpeWFuLnNoYXJpZkBzeW5lc2lzaXQuaW5mbyIsImxpY2Vuc2VfbmFtZSI6Ikhvc3QiLCJyb2xlIjoiT3duZXIiLCJvcmdhbml6YXRpb25faWQiOiJjMmRkOTkxNi1jZTY4LTExZWQtOWE0Yy0wMjQyYWMxMzAwMDgiLCJvcmdhbml6YXRpb25fbmFtZSI6IlN5bmVzaXMgSVQgUExDIiwiSUQiOiI3YzBlNTVhOS1jNGU2LTQ5NmItYTViYS0yM2I5ZjY4MWI2YjEiLCJ2YW5pdHlfdXJsIjpudWxsLCJkaXNwbGF5X25hbWUiOiJSYWl5YW4gU2hhcmlmIiwib3JnYW5pemF0aW9uX2xvZ28iOm51bGwsImlzX2NtX3VzZXIiOnRydWV9LCJkZXZpY2VfaWQiOiJVQVZOTEpTRkJPIiwidXNlcl9pZCI6IkByYWl5YW4uc2hhcmlmYXRzeW5lc2lzaXQuaW5mbzptYXRyaXguY29udmF5LmNvbSIsIndlbGxfa25vd24iOm51bGwsInBlcm1pc3Npb24iOnsidmlld19ncm91cCI6dHJ1ZSwiYWRkX3JvbGUiOnRydWUsInZpZXdfb3JnYW5pemF0aW9uIjp0cnVlLCJlZGl0X3VzZXIiOnRydWUsImVkaXRfb3JnYW5pemF0aW9uIjp0cnVlLCJlZGl0X2dyb3VwIjp0cnVlLCJkZWxldGVfcm9sZSI6dHJ1ZSwidmlld19yb2xlIjp0cnVlLCJlZGl0X3JvbGUiOnRydWUsInZpZXdfbWVldGluZyI6dHJ1ZSwiYWRkX2dyb3VwIjp0cnVlLCJ2aWV3X2Rhc2hib2FyZCI6dHJ1ZSwidmlld191c2VyIjp0cnVlLCJkZWxldGVfdXNlciI6dHJ1ZSwiYWRkX3VzZXIiOnRydWUsImRlbGV0ZV9ncm91cCI6dHJ1ZX0sImV4cCI6MTc2OTAwNzE1MiwiaWF0IjoxNzY5MDA2MjUyLCJob21lX3NlcnZlciI6Im1hdHJpeC5jb252YXkuY29tIn0.nftslDZv3EEtRDND1zbKmUeuzOxpUqtttkcNoRNYpVFFM8CFrSa1Lj_YKTP4U2BWSrgUgbUZXc4ExZa7OHq6dw"
         }
         convayMeetView.join(options)
         pipViewCoordinator = PiPViewCoordinator(withView: convayMeetView)
@@ -137,9 +160,26 @@ extension ViewController: ConvayMeetViewDelegate {
         func enterPicture(inPicture data: [AnyHashable : Any]!) {
             self.pipViewCoordinator?.enterPictureInPicture()
         }
-//    func conferenceJoined(_ data: [AnyHashable : Any]!) {
-//        print("Conference joined")
-//    }
+    
+    func conferenceJoined(_ data: [AnyHashable : Any]!) {
+        print("✅ Conference joined - Data: \(String(describing: data))")
+        
+        // Log all available data to understand track state
+        if let dataDict = data {
+            for (key, value) in dataDict {
+                print("📊 Conference data - Key: \(key), Value: \(value)")
+            }
+        }
+        
+        // Check video track state after joining
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            print("🔍 Checking video track state after conference join...")
+            // The SDK logs should show:
+            // - "onUserMediaSuccess" if video track is created
+            // - "Video component render" if track is being rendered
+            // - "TRACK_MUTE_CHANGED" events for track mute state
+        }
+    }
 //    
 //    func conferenceTerminated(_ data: [AnyHashable : Any]!) {
 //        print("Conference ended")
