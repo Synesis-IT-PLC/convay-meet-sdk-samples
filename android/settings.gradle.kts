@@ -26,14 +26,11 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
         maven { url = uri("https://jitpack.io") }
-        maven { url = uri("https://repo.meethour.io/maven/releases/") }
         maven {
-            url = uri("https://maven.pkg.github.com/Synesis-IT-PLC/convay-meet-sdk-9646")
-            credentials {
-                username = getProperty("gpr.user") ?: System.getenv("GITHUB_USERNAME") ?: ""
-                password = getProperty("gpr.token") ?: System.getenv("GITHUB_TOKEN") ?: ""
-            }
+            url =
+                uri("https://raw.githubusercontent.com/Synesis-IT-PLC/convay-maven-repository/master/releases")
         }
+
     }
 }
 
