@@ -41,7 +41,7 @@ android {
 
 dependencies {
 
-    implementation("org.convay.react:convay-meet-sdk:1.0.1")
+    implementation("org.convay.react:convay-meet-sdk:1.0.10")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)

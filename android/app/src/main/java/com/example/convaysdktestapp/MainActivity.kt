@@ -74,8 +74,19 @@ class MainActivity : ComponentActivity() {
                 .setMeetingLink(trimmedLink)  // required
                 .setUserInfo(userInfo) // optional
                 .setFeatureFlag("joinpage.enabled", true) //required
-//                .setFeatureFlag("notifications.enabled", false) // optional
-//                .setFeatureFlag("filmstrip.enabled", false) // optional
+                .setFeatureFlag("prejoinpage.enabled", false)
+                .setFeatureFlag("unique-participant-join.enabled", true)
+                .setFeatureFlag("chat.enabled", true)
+//                .setFeatureFlag("title-bar.enabled", false)
+                .setFeatureFlag("participants.enabled", false)
+                .setFeatureFlag("active-speaker-name.enabled", false)
+                .setFeatureFlag("tile-view.enabled", false)
+                .setFeatureFlag("notifications.enabled", false) // optional
+                .setFeatureFlag("filmstrip.enabled", false) // optional
+                .setFeatureFlag("overflow-menu.enabled", false) // optional
+                .setFeatureFlag("audio-mute.enabled", false) // optional
+                .setFeatureFlag("video-mute.enabled", false) // optional
+                .setFeatureFlag("android.screensharing.enabled", false) // optional
 //                .setFeatureFlag("screenshare.landscape.enabled", true) // optional
 //                // Hide self-view by default
 //                .setConfigOverride("disableSelfView", true)

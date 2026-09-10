@@ -24,12 +24,15 @@ dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         google()
-        mavenCentral()
-        maven { url = uri("https://jitpack.io") }
         maven {
             url =
                 uri("https://raw.githubusercontent.com/Synesis-IT-PLC/convay-maven-repository/master/releases")
         }
+        mavenCentral()
+        maven { url = uri("https://jitpack.io") }
+        // Local SDK Maven repo produced by ./android/scripts/build-local-sdk.sh
+//        maven { url = uri("/Users/rotno/convay-meet-sdk-9646/local-maven-repository/releases") }
+
 
     }
 }
