@@ -7,17 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		920A6E112F20CB9A006FAE2B /* WebRTC.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92D751D52F14E819008C5BCA /* WebRTC.xcframework */; };
-		920A6E122F20CB9A006FAE2B /* WebRTC.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 92D751D52F14E819008C5BCA /* WebRTC.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		920A6E142F20CB9F006FAE2B /* GiphyUISDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92D751D12F14E7FB008C5BCA /* GiphyUISDK.xcframework */; };
-		920A6E152F20CB9F006FAE2B /* GiphyUISDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 92D751D12F14E7FB008C5BCA /* GiphyUISDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		920A6E182F223991006FAE2B /* ConvayMeetSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 920A6E172F223991006FAE2B /* ConvayMeetSDK */; };
-		920A6E1A2F2239A1006FAE2B /* ConvayMeetSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 920A6E192F2239A1006FAE2B /* ConvayMeetSDK */; };
+		920F7CC330611A0B00DCD59C /* ConvayMeetSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 920F7CC230611A0B00DCD59C /* ConvayMeetSDK */; };
+		920F7CC530611A1200DCD59C /* ConvayMeetSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 920F7CC430611A1200DCD59C /* ConvayMeetSDK */; };
 		92DF14242F1F9558009B572B /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92DF14232F1F9557009B572B /* ReplayKit.framework */; };
 		92DF143A2F1F9558009B572B /* sharescreen.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 92DF14222F1F9557009B572B /* sharescreen.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		920F2E773052C6010098535D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 92D751942F14D570008C5BCA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92DF14212F1F9557009B572B;
+			remoteInfo = sharescreen;
+		};
 		92DF14382F1F9558009B572B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 92D751942F14D570008C5BCA /* Project object */;
@@ -28,14 +31,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		920A6E132F20CB9A006FAE2B /* Embed Frameworks */ = {
+		920F2E7B3052C6010098535D /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				920A6E152F20CB9F006FAE2B /* GiphyUISDK.xcframework in Embed Frameworks */,
-				920A6E122F20CB9A006FAE2B /* WebRTC.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -55,8 +56,6 @@
 
 /* Begin PBXFileReference section */
 		92D7519C2F14D570008C5BCA /* convaySDKTestApp2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = convaySDKTestApp2.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		92D751D12F14E7FB008C5BCA /* GiphyUISDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = GiphyUISDK.xcframework; path = "../../Projects/convay-meet-sdk-9646/local-ios-sdk/RequiredFrameworks/GiphyUISDK.xcframework"; sourceTree = "<group>"; };
-		92D751D52F14E819008C5BCA /* WebRTC.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = WebRTC.xcframework; path = "../../Projects/convay-meet-sdk-9646/local-ios-sdk/RequiredFrameworks/WebRTC.xcframework"; sourceTree = "<group>"; };
 		92DF14222F1F9557009B572B /* sharescreen.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = sharescreen.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		92DF14232F1F9557009B572B /* ReplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReplayKit.framework; path = System/Library/Frameworks/ReplayKit.framework; sourceTree = SDKROOT; };
 		92DF142F2F1F9558009B572B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -103,9 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				920A6E112F20CB9A006FAE2B /* WebRTC.xcframework in Frameworks */,
-				920A6E182F223991006FAE2B /* ConvayMeetSDK in Frameworks */,
-				920A6E142F20CB9F006FAE2B /* GiphyUISDK.xcframework in Frameworks */,
+				920F7CC330611A0B00DCD59C /* ConvayMeetSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,7 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				920A6E1A2F2239A1006FAE2B /* ConvayMeetSDK in Frameworks */,
+				920F7CC530611A1200DCD59C /* ConvayMeetSDK in Frameworks */,
 				92DF14242F1F9558009B572B /* ReplayKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,8 +140,6 @@
 		92D751CB2F14E656008C5BCA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				92D751D52F14E819008C5BCA /* WebRTC.xcframework */,
-				92D751D12F14E7FB008C5BCA /* GiphyUISDK.xcframework */,
 				92DF14232F1F9557009B572B /* ReplayKit.framework */,
 				92DF142F2F1F9558009B572B /* UIKit.framework */,
 			);
@@ -162,19 +157,20 @@
 				92D751992F14D570008C5BCA /* Frameworks */,
 				92D7519A2F14D570008C5BCA /* Resources */,
 				92DF14432F1F9558009B572B /* Embed Foundation Extensions */,
-				920A6E132F20CB9A006FAE2B /* Embed Frameworks */,
+				920F2E7B3052C6010098535D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				92DF14392F1F9558009B572B /* PBXTargetDependency */,
+				920F2E783052C6010098535D /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				92D7519E2F14D570008C5BCA /* convaySDKTestApp2 */,
 			);
 			name = convaySDKTestApp2;
 			packageProductDependencies = (
-				920A6E172F223991006FAE2B /* ConvayMeetSDK */,
+				920F7CC230611A0B00DCD59C /* ConvayMeetSDK */,
 			);
 			productName = convaySDKTestApp2;
 			productReference = 92D7519C2F14D570008C5BCA /* convaySDKTestApp2.app */;
@@ -196,9 +192,6 @@
 				92DF14252F1F9558009B572B /* sharescreen */,
 			);
 			name = sharescreen;
-			packageProductDependencies = (
-				920A6E192F2239A1006FAE2B /* ConvayMeetSDK */,
-			);
 			productName = sharescreen;
 			productReference = 92DF14222F1F9557009B572B /* sharescreen.appex */;
 			productType = "com.apple.product-type.app-extension";
@@ -232,7 +225,7 @@
 			mainGroup = 92D751932F14D570008C5BCA;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				920A6E162F223987006FAE2B /* XCLocalSwiftPackageReference "../../Projects/convay-meet-sdk-9646/local-ios-sdk" */,
+				920F7CC130611A0B00DCD59C /* XCRemoteSwiftPackageReference "convay-meet-ios-sdk-releases" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 92D7519D2F14D570008C5BCA /* Products */;
@@ -280,6 +273,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		920F2E783052C6010098535D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 92DF14212F1F9557009B572B /* sharescreen */;
+			targetProxy = 920F2E773052C6010098535D /* PBXContainerItemProxy */;
+		};
 		92DF14392F1F9558009B572B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 92DF14212F1F9557009B572B /* sharescreen */;
@@ -592,22 +590,26 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCLocalSwiftPackageReference section */
-		920A6E162F223987006FAE2B /* XCLocalSwiftPackageReference "../../Projects/convay-meet-sdk-9646/local-ios-sdk" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = "../../Projects/convay-meet-sdk-9646/local-ios-sdk";
+/* Begin XCRemoteSwiftPackageReference section */
+		920F7CC130611A0B00DCD59C /* XCRemoteSwiftPackageReference "convay-meet-ios-sdk-releases" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Synesis-IT-PLC/convay-meet-ios-sdk-releases";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.10;
+			};
 		};
-/* End XCLocalSwiftPackageReference section */
+/* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		920A6E172F223991006FAE2B /* ConvayMeetSDK */ = {
+		920F7CC230611A0B00DCD59C /* ConvayMeetSDK */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 920A6E162F223987006FAE2B /* XCLocalSwiftPackageReference "../../Projects/convay-meet-sdk-9646/local-ios-sdk" */;
+			package = 920F7CC130611A0B00DCD59C /* XCRemoteSwiftPackageReference "convay-meet-ios-sdk-releases" */;
 			productName = ConvayMeetSDK;
 		};
-		920A6E192F2239A1006FAE2B /* ConvayMeetSDK */ = {
+		920F7CC430611A1200DCD59C /* ConvayMeetSDK */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 920A6E162F223987006FAE2B /* XCLocalSwiftPackageReference "../../Projects/convay-meet-sdk-9646/local-ios-sdk" */;
+			package = 920F7CC130611A0B00DCD59C /* XCRemoteSwiftPackageReference "convay-meet-ios-sdk-releases" */;
 			productName = ConvayMeetSDK;
 		};
 /* End XCSwiftPackageProductDependency section */
